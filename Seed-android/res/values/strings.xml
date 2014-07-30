@@ -2,5 +2,5 @@
 <resources>
 
     <string name="app_name">Seed</string>
-
+    <string name="menuprincipal">Menu principal</string>
 </resources>

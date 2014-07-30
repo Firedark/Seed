@@ -4,8 +4,9 @@ import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
 import com.firedark.seed.Seed;
+import com.firedark.seed.interfaces.AndroidInterface;
 
-public class HtmlLauncher extends GwtApplication {
+public class HtmlLauncher extends GwtApplication implements AndroidInterface {
 
         @Override
         public GwtApplicationConfiguration getConfig () {
@@ -14,6 +15,12 @@ public class HtmlLauncher extends GwtApplication {
 
         @Override
         public ApplicationListener getApplicationListener () {
-                return new Seed();
+                return new Seed(this);
         }
+
+		@Override
+		public String translator(String s) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 }
